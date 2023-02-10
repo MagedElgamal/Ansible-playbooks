@@ -1,0 +1,9 @@
+- name: "Disable IE on Windows"
+  hosts: ~.*
+ 
+  tasks:
+  - name: Disable IE PowerShell script
+    win_shell: |      
+      Disable-WindowsOptionalFeature -FeatureName Internet-Explorer-Optional-amd64 -Online -NoRestart
+
+     
